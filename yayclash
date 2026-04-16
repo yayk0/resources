@@ -410,6 +410,10 @@ rule-providers:
     format: text
     type: http
 rules:
+- DOMAIN-SUFFIX,tailscale.com,DIRECT
+- DOMAIN-SUFFIX,ts.net,DIRECT
+- DOMAIN-SUFFIX,myunraid.net,DIRECT
+- DOMAIN,connect.myunraid.net,DIRECT
 - RULE-SET,LocalAreaNetwork,全球直连
 - RULE-SET,UnBan,全球直连
 - RULE-SET,BanAD,广告拦截
