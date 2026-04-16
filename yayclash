@@ -401,6 +401,7 @@ rule-providers:
     format: text
     type: http
 rules:
+- DOMAIN-SUFFIX,kaspersky.com,DIRECT
 - DOMAIN-SUFFIX,tailscale.com,DIRECT
 - DOMAIN-SUFFIX,ts.net,DIRECT
 - DOMAIN-SUFFIX,myunraid.net,DIRECT
