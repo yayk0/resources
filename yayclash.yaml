@@ -17,6 +17,15 @@ proxy-groups:
   include-all: true
   interval: 300
   tolerance: 50
+- name: 虚拟货币
+  icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Cellular.png
+  type: select
+  proxies:
+  - 节点选择
+  - 自动选择
+  - 手动切换
+  - DIRECT
+  include-all: true
 - name: 电报消息
   icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Telegram.png
   type: select
@@ -368,6 +377,13 @@ rule-providers:
   ProxyMedia:
     url: https://testingcf.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/ProxyMedia.list
     path: ./ruleset/ProxyMedia.list
+    behavior: classical
+    interval: 86400
+    format: text
+    type: http
+  Binance:
+    url: https://testingcf.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Ruleset/Binance.list
+    path: ./ruleset/ProxyGFWlist.list
     behavior: classical
     interval: 86400
     format: text
