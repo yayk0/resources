@@ -430,6 +430,7 @@ rules:
 - RULE-SET,GoogleFCM,谷歌FCM
 - RULE-SET,GoogleCN,全球直连
 - RULE-SET,SteamCN,全球直连
+- RULE-SET,Binance,虚拟货币
 - RULE-SET,AI-MIX,OpenAi
 - RULE-SET,Bing,微软Bing
 - RULE-SET,OneDrive,微软云盘
