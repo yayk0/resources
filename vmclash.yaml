@@ -1,6 +1,3 @@
-hosts:
-  '*.a.com': 192.168.5.254
-  'a.com': 192.168.5.254
 proxy-groups:
 - name: 节点选择
   icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Proxy.png
@@ -8,10 +5,11 @@ proxy-groups:
   proxies:
   - DIRECT
   include-all: true
-- name: Tailscale
+- name: 回家专用
   icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Direct.png
   type: select
   proxies:
+  - Tailscale
   - DIRECT
 - name: 电报消息
   icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Telegram.png
@@ -274,8 +272,8 @@ rule-providers:
     format: text
     type: http
 rules:
-- DOMAIN-SUFFIX,yayk0.com,Tailscale
-- IP-CIDR,192.168.5.0/24,Tailscale,no-resolve
+- DOMAIN-SUFFIX,yayk0.com,回家专用
+- IP-CIDR,192.168.5.0/24,回家专用,no-resolve
 - DOMAIN-SUFFIX,tailscale.com,DIRECT
 - DOMAIN-SUFFIX,ts.net,DIRECT
 - RULE-SET,LocalAreaNetwork,全球直连
