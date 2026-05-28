@@ -5,6 +5,12 @@ proxy-groups:
   proxies:
   - DIRECT
   include-all: true
+- name: Tailscale
+  icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Direct.png
+  type: select
+  proxies:
+  - Tailscale
+  - DIRECT
 - name: 电报消息
   icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Telegram.png
   type: select
@@ -266,7 +272,8 @@ rule-providers:
     format: text
     type: http
 rules:
-- DOMAIN-SUFFIX,yayk0.com,DIRECT
+- DOMAIN-SUFFIX,yayk0.com,Tailscale
+- IP-CIDR,192.168.5.0/24,Tailscale,no-resolve
 - DOMAIN-SUFFIX,tailscale.com,DIRECT
 - DOMAIN-SUFFIX,ts.net,DIRECT
 - RULE-SET,LocalAreaNetwork,全球直连
