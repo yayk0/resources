@@ -12,7 +12,6 @@ proxy-groups:
   icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Direct.png
   type: select
   proxies:
-  - Tailscale
   - DIRECT
 - name: 电报消息
   icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Telegram.png
