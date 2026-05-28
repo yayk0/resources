@@ -1,3 +1,6 @@
+hosts:
+  '*.a.com': 192.168.5.254
+  'a.com': 192.168.5.254
 proxy-groups:
 - name: 节点选择
   icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Proxy.png
