@@ -284,7 +284,7 @@ proxy-groups:
     proxies:
       - 🚀 常规代理
       - DIRECT
-  - name: 🍎 Apple Proxy
+  - name: 🍎 Apple 服务
     type: select
     include-all: true
     exclude-filter: "(?i)NAS"
@@ -343,7 +343,7 @@ rules:
   - RULE-SET,telegram,✈️ Telegram
 
   - RULE-SET,crypto,💰 数字资产
-  - RULE-SET,apple_proxy,🍎 Apple Proxy
+  - RULE-SET,apple_proxy,🍎 Apple 服务
   - RULE-SET,instagram,♾️ Meta 服务
   - RULE-SET,facebook,♾️ Meta 服务
   - RULE-SET,whatsapp,♾️ Meta 服务
