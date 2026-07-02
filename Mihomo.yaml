@@ -77,47 +77,12 @@ rule-providers:
     url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Crypto/Crypto_No_Resolve.yaml"
     path: ./ruleset/crypto_no_resolve.yaml
     interval: 86400
-  app_store:
+  apple_proxy:
     type: http
     behavior: classical
     format: yaml
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/AppStore/AppStore_No_Resolve.yaml"
-    path: ./ruleset/app_store_no_resolve.yaml
-    interval: 86400
-  testflight:
-    type: http
-    behavior: classical
-    format: yaml
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/TestFlight/TestFlight_No_Resolve.yaml"
-    path: ./ruleset/testflight_no_resolve.yaml
-    interval: 86400
-  apple_music:
-    type: http
-    behavior: classical
-    format: yaml
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/AppleMusic/AppleMusic_No_Resolve.yaml"
-    path: ./ruleset/apple_music_no_resolve.yaml
-    interval: 86400
-  apple_push:
-    type: http
-    behavior: classical
-    format: text
-    url: "https://raw.githubusercontent.com/QuixoticHeart/rule-set/refs/heads/ruleset/loon/apns.list"
-    path: ./ruleset/apple_push.list
-    interval: 86400
-  apple_news:
-    type: http
-    behavior: classical
-    format: yaml
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/AppleNews/AppleNews_No_Resolve.yaml"
-    path: ./ruleset/apple_news_no_resolve.yaml
-    interval: 86400
-  icloud_private_relay:
-    type: http
-    behavior: classical
-    format: yaml
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/iCloudPrivateRelay/iCloudPrivateRelay_No_Resolve.yaml"
-    path: ./ruleset/icloud_private_relay_no_resolve.yaml
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/AppleProxy/AppleProxy.yaml"
+    path: ./ruleset/apple_proxy.yaml
     interval: 86400
 
   instagram:
@@ -292,7 +257,7 @@ proxy-groups:
     exclude-filter: "(?i)NAS"
     proxies:
       - DIRECT
-  - name: 🏡 回家代理
+  - name: 🏡 回家策略
     type: select
     include-all: true
     filter: "(?i)NAS"
@@ -313,6 +278,13 @@ proxy-groups:
       - 🚀 常规代理
       - DIRECT
   - name: 💰 数字资产
+    type: select
+    include-all: true
+    exclude-filter: "(?i)NAS"
+    proxies:
+      - 🚀 常规代理
+      - DIRECT
+  - name: 🍎 Apple Proxy
     type: select
     include-all: true
     exclude-filter: "(?i)NAS"
@@ -363,7 +335,7 @@ proxy-groups:
       - DIRECT
 
 rules:
-  - IP-CIDR,192.168.5.0/24,🏡 回家代理,no-resolve
+  - IP-CIDR,192.168.5.0/24,🏡 回家策略,no-resolve
 
   - RULE-SET,openai,🤖 海外 AI
   - RULE-SET,gemini,🤖 海外 AI
@@ -371,12 +343,7 @@ rules:
   - RULE-SET,telegram,✈️ Telegram
 
   - RULE-SET,crypto,💰 数字资产
-  - RULE-SET,app_store,DIRECT
-  - RULE-SET,testflight,DIRECT
-  - RULE-SET,apple_music,DIRECT
-  - RULE-SET,apple_push,🚀 常规代理
-  - RULE-SET,apple_news,🚀 常规代理
-  - RULE-SET,icloud_private_relay,🚀 常规代理
+  - RULE-SET,apple_proxy,🍎 Apple Proxy
   - RULE-SET,instagram,♾️ Meta 服务
   - RULE-SET,facebook,♾️ Meta 服务
   - RULE-SET,whatsapp,♾️ Meta 服务
