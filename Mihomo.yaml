@@ -289,75 +289,75 @@ proxy-groups:
   - name: 🚀 常规代理
     type: select
     include-all: true
-    exclude-filter: "(?i)nas"
+    exclude-filter: "(?i)NAS"
     proxies:
       - DIRECT
   - name: 🏡 回家代理
     type: select
     include-all: true
-    filter: "(?i)nas"
+    filter: "(?i)NAS"
     proxies:
       - DIRECT
   - name: 🌐 国际流媒体
     type: select
     include-all: true
-    exclude-filter: "(?i)nas"
+    exclude-filter: "(?i)NAS"
     proxies:
       - 🚀 常规代理
       - DIRECT
   - name: 🤖 海外 AI
     type: select
     include-all: true
-    exclude-filter: "(?i)nas"
+    exclude-filter: "(?i)NAS"
     proxies:
       - 🚀 常规代理
       - DIRECT
   - name: 💰 数字资产
     type: select
     include-all: true
-    exclude-filter: "(?i)nas"
+    exclude-filter: "(?i)NAS"
     proxies:
       - 🚀 常规代理
       - DIRECT
   - name: ♾️ Meta 服务
     type: select
     include-all: true
-    exclude-filter: "(?i)nas"
+    exclude-filter: "(?i)NAS"
     proxies:
       - 🚀 常规代理
       - DIRECT
   - name: 𝕏 X 平台
     type: select
     include-all: true
-    exclude-filter: "(?i)nas"
+    exclude-filter: "(?i)NAS"
     proxies:
       - 🚀 常规代理
       - DIRECT
   - name: ✈️ Telegram
     type: select
     include-all: true
-    exclude-filter: "(?i)nas"
+    exclude-filter: "(?i)NAS"
     proxies:
       - 🚀 常规代理
       - DIRECT
   - name: Ⓜ️ Microsoft 服务
     type: select
     include-all: true
-    exclude-filter: "(?i)nas"
+    exclude-filter: "(?i)NAS"
     proxies:
       - 🚀 常规代理
       - DIRECT
   - name: 🎮 游戏平台
     type: select
     include-all: true
-    exclude-filter: "(?i)nas"
+    exclude-filter: "(?i)NAS"
     proxies:
       - 🚀 常规代理
       - DIRECT
   - name: 🐟 漏网之鱼
     type: select
     include-all: true
-    exclude-filter: "(?i)nas"
+    exclude-filter: "(?i)NAS"
     proxies:
       - 🚀 常规代理
       - DIRECT
